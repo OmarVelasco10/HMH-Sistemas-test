@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import { PanelPage } from "../pages/PanelPage";
+import { Panel } from "../pages/";
 import { Navigate } from "react-router-dom";
-import { GitPage, TimerPage, TodoPage } from "../pages";
+import { GitPage, TimerPage, Todo } from "../pages";
 
 export const TasksRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<PanelPage />} />
-      <Route path="todo" element={<TodoPage />} />
+      <Route path="/" element={<Panel />} />
+      <Route path="todo" element={<Todo />} />
       <Route path="timer" element={<TimerPage />} />
-      <Route path="git" element={<GitPage />} />
+      <Route path="git-profile" element={<GitPage />} />
 
 
       <Route path="/*" element={<Navigate to="/" />} />

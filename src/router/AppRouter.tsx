@@ -4,16 +4,18 @@ import { PublicRoute } from "./PublicRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
 import { TasksRoutes } from "../tasks/routes/TasksRoutes";
+import { useAppSelector } from "../hooks";
 
 export const AppRouter = () => {
-  const authStatus = "not-authenticated";
+  const { loginSuccess } = useAppSelector( (state ) => state.auth);
+
 
   return (
     <Routes>
       <Route 
         path="/auth/*"
         element={
-            <PublicRoute status={authStatus}>
+            <PublicRoute status={loginSuccess}>
                 <AuthRoutes />
             </PublicRoute>
         }
@@ -21,7 +23,7 @@ export const AppRouter = () => {
       <Route 
         path="/*"
         element={
-            <PrivateRoute status={authStatus}>
+            <PrivateRoute status={loginSuccess}>
                 <TasksRoutes />
             </PrivateRoute>
         }
