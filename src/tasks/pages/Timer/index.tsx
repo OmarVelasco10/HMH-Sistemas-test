@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Countdown } from "./components/Countdown";
 import { Button, CardContainer, Input, MainContainer } from "./styled";
+import { Navbar } from "../../components/Navbar";
 
 const Component = () => {
   const [time, setTime] = useState(0);
@@ -17,22 +18,25 @@ const Component = () => {
   };
 
   return (
-    <MainContainer>
-      <CardContainer className="card w-50 mb-2">
-        <div className="card-body">
-          <h5 className="card-title">Introduce el tiempo en segundos</h5>
-          <Input className="form-control mb-2" onChange={onInputChange} />
-          <Button className="btn" onClick={onSubmit}>
-            Enviar
-          </Button>
-        </div>
-      </CardContainer>
-      {isReady && (
-        <CardContainer className="card w-50">
-          <Countdown seconds={time} />
+    <>
+      <Navbar />
+      <MainContainer>
+        <CardContainer className="card w-50 mb-2">
+          <div className="card-body">
+            <h5 className="card-title">Introduce el tiempo en segundos</h5>
+            <Input className="form-control mb-2" onChange={onInputChange} />
+            <Button className="btn" onClick={onSubmit}>
+              Enviar
+            </Button>
+          </div>
         </CardContainer>
-      )}
-    </MainContainer>
+        {isReady && (
+          <CardContainer className="card w-50">
+            <Countdown seconds={time} />
+          </CardContainer>
+        )}
+      </MainContainer>
+    </>
   );
 };
 

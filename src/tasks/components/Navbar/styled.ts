@@ -9,17 +9,21 @@ export const MainContainer = styled.div`
   align-items: center;
 `;
 
-export const CardContainer = styled.div`
-  gap: 10px;
-  border-color: #8758ff;;
+export const InputGitProfile = styled.input`
+max-width: 50vw;
+  border: 1px solid #8758ff;
 `;
 
-export const Input = styled.input`
-    border-color: #8758ff;
+export const NavbarUl = styled.ul`
+    display: flex;
+    flex-direction: row;
+    gap: 10px
 `;
 
 export const Button = styled.button`
-  background-color: #8758ff;
-  color: #fff;
-  
+    /* background: #8758ff; */
+    background: #8758ff;
+   
+    color: #FFF;
 `;
+

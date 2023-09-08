@@ -27,3 +27,10 @@ export const checkingAuthentication = () => {
       return null;
     }
   };
+
+export const startLogout = () => {
+
+  return (dispatch) => {
+    dispatch(logout());
+  }
+}

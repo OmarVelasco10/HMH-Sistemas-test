@@ -1,11 +1,16 @@
+import { Navbar } from "../../components/Navbar";
 import { TodoWrapper } from "./components/TodoWrapper";
 import { MainContainer } from "./styled";
 
 const Component = () => {
   return (
-    <MainContainer>
+    <>
+    <Navbar />
+      <MainContainer>
       <TodoWrapper />
     </MainContainer>
+    </>
+  
   );
 };
 
