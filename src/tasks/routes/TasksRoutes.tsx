@@ -1,6 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { Panel } from "../pages/";
-import { Navigate } from "react-router-dom";
 import { GitProfile, Timer, TodoPage } from "../pages";
 
 export const TasksRoutes = () => {
@@ -11,13 +10,7 @@ export const TasksRoutes = () => {
       <Route path="timer" element={<Timer />} />
       <Route path="git-profile" element={<GitProfile />} />
 
-
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
-
-
-
-
-

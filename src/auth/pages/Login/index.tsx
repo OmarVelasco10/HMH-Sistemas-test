@@ -1,11 +1,11 @@
-
+import { useEffect } from "react";
+import Swal from "sweetalert2";
+import md5 from 'md5';
 import { MainContainer, FormContainer, Title, Button, Input } from "./styled";
 import { useForm } from "../../../hooks/useForm";
 import { startLogin } from "../../../store/auth";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { useEffect } from "react";
-import Swal from "sweetalert2";
-import md5 from 'md5';
+
 
 const formFields = {
   user: "",
@@ -30,8 +30,7 @@ const Component = () => {
 
   const onLoginSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log({ user, password });
-    // dispatch(checkingCredentials());
+
     dispatch(startLogin(user,md5(password)));
     
   };

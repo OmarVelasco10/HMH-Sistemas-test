@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   width: 18rem;
-  border-color:  #8758ff;
+  border-color:  ${(props) => props.theme.colors.purpleSecondary};
 
   li {
-    border-color:  #8758ff;
+    border-color: ${(props) => props.theme.colors.purpleSecondary};
   }
 `;
 

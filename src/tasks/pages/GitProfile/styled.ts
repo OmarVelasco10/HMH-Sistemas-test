@@ -14,8 +14,6 @@ export const InputGitProfile = styled.input`
   max-width: 50vw;
 `;
 
-export const Title = styled.h1``;
-
 export const Button = styled.button`
   background-color: ${(props) => props.theme.colors.purpleSecondary};
   color: ${(props) => props.theme.colors.whitePrimary};

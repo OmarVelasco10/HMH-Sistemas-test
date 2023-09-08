@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Navigate, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 interface RoutesProps {
     children: ReactElement;

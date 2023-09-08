@@ -7,7 +7,6 @@ interface CountdownProps {
 }
 
 const Component = ({ seconds }: CountdownProps) => {
-  console.log({ seconds });
   const [countdown, setCountdown] = useState<number>(seconds);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const timerId = useRef<any | undefined>(undefined);
@@ -41,7 +40,6 @@ const Component = ({ seconds }: CountdownProps) => {
 
   const start = () => {
     setIsRunning(!isRunning);
-    console.log(isRunning);
   };
 
   const clear = () => {

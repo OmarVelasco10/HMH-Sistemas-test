@@ -4,8 +4,8 @@ import { PublicRoute } from "./PublicRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
 import { TasksRoutes } from "../tasks/routes/TasksRoutes";
-import { useAppDispatch, useAppSelector } from "../hooks";
 import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../hooks";
 import { checkingAuthentication } from "../store/auth";
 
 export const AppRouter = () => {
@@ -14,29 +14,28 @@ export const AppRouter = () => {
   useEffect(() => {
     const thunk = checkingAuthentication();
 
-    if (typeof thunk === 'function') {
+    if (typeof thunk === "function") {
       thunk(dispatch);
     }
   }, [dispatch]);
-  const { loginSuccess } = useAppSelector( (state ) => state.auth);
-
+  const { loginSuccess } = useAppSelector((state) => state.auth);
 
   return (
     <Routes>
-      <Route 
+      <Route
         path="/auth/*"
         element={
-            <PublicRoute status={loginSuccess}>
-                <AuthRoutes />
-            </PublicRoute>
+          <PublicRoute status={loginSuccess}>
+            <AuthRoutes />
+          </PublicRoute>
         }
       />
-      <Route 
+      <Route
         path="/*"
         element={
-            <PrivateRoute status={loginSuccess}>
-                <TasksRoutes />
-            </PrivateRoute>
+          <PrivateRoute status={loginSuccess}>
+            <TasksRoutes />
+          </PrivateRoute>
         }
       />
     </Routes>

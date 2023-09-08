@@ -9,7 +9,6 @@ const Component = (props: {data:DataProps }) => {
 const {name, location, avatarUrl, public_repos, followers} = props.data;
 
   return (
-    <>
       <MainContainer className="card">
         <ImgProfile src={avatarUrl} className="card-img-top" alt={name} />
         <div className="card-body">
@@ -21,7 +20,6 @@ const {name, location, avatarUrl, public_repos, followers} = props.data;
           <li className="list-group-item"><b>Followers:</b> {followers}</li>
         </ul>
       </MainContainer>
-    </>
   );
 };
 

@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { useAppDispatch } from "../../../hooks";
 import { MainContainer, NavbarUl } from "./styled";
 import { startLogout } from "../../../store/auth";
 
 const Component = () => {
-    const { user } = useAppSelector( (state ) => state.auth);
     const dispatch = useAppDispatch();
-    console.log(user);
 
     const logout = () => {
         dispatch(startLogout());

@@ -1,4 +1,4 @@
-import GitApi from "../apis/gitApi";
+import GitApi from "../apis/githubApi";
 
 export const getGitHubProfile = async (user) => {
     try {

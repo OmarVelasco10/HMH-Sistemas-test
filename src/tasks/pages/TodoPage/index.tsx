@@ -5,12 +5,11 @@ import { MainContainer } from "./styled";
 const Component = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <MainContainer>
-      <TodoWrapper />
-    </MainContainer>
+        <TodoWrapper />
+      </MainContainer>
     </>
-  
   );
 };
 

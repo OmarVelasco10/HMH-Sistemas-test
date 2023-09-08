@@ -6,7 +6,7 @@ export const FormTodo = styled.form`
 
 export const Input = styled.input`
   background: none;
-  border: 1px solid #8758ff;
+  border: 1px solid ${(props) => props.theme.colors.purpleSecondary};
   color: ${(props) => props.theme.colors.whitePrimary};
   margin-bottom: 2rem;
   margin-top: 1rem;
