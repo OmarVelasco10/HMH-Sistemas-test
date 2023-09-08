@@ -1,10 +1,10 @@
 import AuthApi from "../apis/authAPI";
 
+
 export const loginWithUserPassword = async(user, passwordUser) => {
 
     try {
         const {data} = await AuthApi.get();
-        console.log(data);
         const { userName, password } = data;
 
         if(userName === user && password === passwordUser) {
@@ -25,3 +25,4 @@ export const loginWithUserPassword = async(user, passwordUser) => {
         
     }
 }
+

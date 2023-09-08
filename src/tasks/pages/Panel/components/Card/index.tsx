@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { MainContainer } from "./styled";
+import { MainContainer, NavLinkCustom } from "./styled";
 
 interface CardProps {
   title: string;
@@ -16,9 +16,9 @@ const Component = (props: CardProps) => {
         <p className="card-text">
           { description }
         </p>
-        <NavLink to={url} className="btn btn-primary">
+        <NavLinkCustom to={url} className="btn">
               Ir
-        </NavLink>
+        </NavLinkCustom>
       
       </div>
     </MainContainer>
