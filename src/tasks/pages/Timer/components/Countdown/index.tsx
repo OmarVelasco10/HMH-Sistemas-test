@@ -1,31 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { ButtonsContainer, MainContainer } from "./styled";
+import { formatTime } from "../../../../../helpers";
 
 interface CountdownProps {
   seconds: number;
 }
 
-const formatTime = (time: number) => {
-  let hours: string | number = Math.floor(time / 3600);
-  let minutes: string | number = Math.floor((time - hours * 3600) / 60);
-  let seconds: string | number = Math.floor(time - hours * 3600 - minutes * 60);
-
-  if (hours < 10) hours = "0" + hours;
-  if (minutes < 10) minutes = "0" + minutes;
-  if (seconds < 10) seconds = "0" + seconds;
-
-  return hours + ":" + minutes + ":" + seconds;
-};
-
 const Component = ({ seconds }: CountdownProps) => {
-    console.log({seconds});
-  const [countdown, setCountdown] = useState(seconds);
+  console.log({ seconds });
+  const [countdown, setCountdown] = useState<number>(seconds);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const timerId = useRef<any | undefined>(undefined);
 
   useEffect(() => {
+    setCountdown(seconds);
+  }, [seconds]);
+
+  useEffect(() => {
     if (isRunning) {
-        console.log(countdown);
       timerId.current = setInterval(() => {
         setCountdown((prev) => prev - 1);
       }, 1000);
@@ -39,7 +31,7 @@ const Component = ({ seconds }: CountdownProps) => {
   }, [countdown]);
 
   const restart = () => {
-    setCountdown(0);
+    setCountdown(seconds);
   };
 
   const stop = () => {
@@ -52,18 +44,25 @@ const Component = ({ seconds }: CountdownProps) => {
     console.log(isRunning);
   };
 
+  const clear = () => {
+    setCountdown(0);
+  };
+
   return (
     <MainContainer>
       <h2 className="text-center">{formatTime(countdown)}</h2>
       <ButtonsContainer className="pt-2">
-        <button className="btn btn-primary" onClick={restart}>
-          Restart
+        <button className="btn btn-success" onClick={start}>
+          Iniciar
         </button>
         <button className="btn btn-danger" onClick={stop}>
           Stop
         </button>
-        <button className="btn btn-success" onClick={start}>
-          Iniciar
+        <button className="btn btn-primary" onClick={restart}>
+          Restart
+        </button>
+        <button className="btn btn-warning" onClick={clear}>
+          Limpiar
         </button>
       </ButtonsContainer>
     </MainContainer>

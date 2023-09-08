@@ -13,7 +13,7 @@ max-width: 50vw;
 export const NavbarUl = styled.ul`
     display: flex;
     flex-direction: row;
-    gap: 10px
+    gap: 30px
 `;
 
 export const Button = styled.button`

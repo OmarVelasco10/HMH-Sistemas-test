@@ -13,7 +13,6 @@ const Component = () => {
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
     setIsReady(true);
   };
 
