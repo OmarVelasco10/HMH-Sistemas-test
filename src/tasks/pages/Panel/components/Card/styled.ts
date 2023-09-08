@@ -9,3 +9,13 @@ export const NavLinkCustom = styled(NavLink)`
   background-color: ${(props) => props.theme.colors.purpleSecondary};
   color: ${(props) => props.theme.colors.whitePrimary};
 `;
+
+export const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    NavLink {
+        align-self: flex-end;
+    }
+`;

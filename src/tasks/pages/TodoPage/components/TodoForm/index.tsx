@@ -23,8 +23,8 @@ const Component = ({ addTodo }: FormProps) => {
     }
   return (
     <FormTodo onSubmit={onSubmit}>
-      <Input type="text" placeholder="Qué harás hoy?" onChange={onInputChange} value={ value }/>
-        <Button type="submit" onClick={onSubmit}>Agregar tarea</Button>
+      <Input type="text" placeholder="What are you going to do today?" onChange={onInputChange} value={ value }/>
+        <Button type="submit" onClick={onSubmit}>Add task</Button>
     </FormTodo>
   );
 };

@@ -22,10 +22,10 @@ const Component = () => {
       <MainContainer>
         <CardContainer className="card w-50 mb-2">
           <div className="card-body">
-            <h5 className="card-title">Introduce el tiempo en segundos</h5>
+            <h5 className="card-title">Enter the time in seconds.</h5>
             <Input className="form-control mb-2" onChange={onInputChange} />
             <Button className="btn" onClick={onSubmit}>
-              Enviar
+              Send
             </Button>
           </div>
         </CardContainer>

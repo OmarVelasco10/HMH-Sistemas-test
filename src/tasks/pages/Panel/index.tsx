@@ -10,7 +10,7 @@ const InformationTask = [
     {
         title: 'Timer',
         url: '/timer',
-        description: ` Un temporizador, o timer en inglés, es una herramienta que se utiliza para medir intervalos de tiempo o para programar eventos en un momento específico. Los timers pueden ser útiles en una variedad de situaciones, como: controlar tareas, medir tiempos, estudiar, realizar recetas de cocina, realizar juegos, meditar, etc. En resumen, un temporizador es una herramienta versátil que se utiliza para medir y gestionar el tiempo en una variedad de contextos, lo que facilita la organización, el control y la eficiencia en diversas actividades de la vida cotidiana.`
+        description: `Herramienta que se utiliza para medir intervalos de tiempo o para programar eventos en un momento específico. Los timers pueden ser útiles en una variedad de situaciones, como: controlar tareas, medir tiempos, estudiar, realizar recetas de cocina, realizar juegos, meditar, etc. En resumen, un temporizador es una herramienta versátil que se utiliza para medir y gestionar el tiempo en una variedad de contextos, lo que facilita la organización, el control y la eficiencia en diversas actividades de la vida cotidiana. Sin duda un timer es necesario para muchas de nuestras actividades.`
     },
     {
         title: 'Git profile',

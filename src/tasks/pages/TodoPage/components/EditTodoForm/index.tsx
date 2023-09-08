@@ -24,8 +24,8 @@ const Component = (props: FormProps) => {
     }
   return (
     <FormTodo onSubmit={onSubmit}>
-      <Input type="text" placeholder="Actualiza tu tarea" onChange={onInputChange} value={ value }/>
-        <Button type="submit" onClick={onSubmit}>Actualizar tarea</Button>
+      <Input type="text" placeholder="Update your task" onChange={onInputChange} value={ value }/>
+        <Button type="submit" onClick={onSubmit}>Update task</Button>
     </FormTodo>
   );
 };

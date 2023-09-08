@@ -53,7 +53,7 @@ const Component = ({ seconds }: CountdownProps) => {
       <h2 className="text-center">{formatTime(countdown)}</h2>
       <ButtonsContainer className="pt-2">
         <button className="btn btn-success" onClick={start}>
-          Iniciar
+          Start
         </button>
         <button className="btn btn-danger" onClick={stop}>
           Stop
@@ -62,7 +62,7 @@ const Component = ({ seconds }: CountdownProps) => {
           Restart
         </button>
         <button className="btn btn-warning" onClick={clear}>
-          Limpiar
+          Clean
         </button>
       </ButtonsContainer>
     </MainContainer>
