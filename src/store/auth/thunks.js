@@ -1,4 +1,4 @@
-import { checkingCookie, login, logout } from "."
+import { checkingCookie, login, logout, showMessage } from "."
 import { loginWithUserPassword } from "../../auth/providers";
 import Cookies from 'js-cookie';
 
@@ -8,7 +8,7 @@ export const startLogin = (user, password) => {
     return async(dispatch) => {
         const result = await loginWithUserPassword(user, password);
 
-        if( !result.ok ) return dispatch(logout(result));
+        if( !result.ok ) return dispatch(showMessage(result));
 
         dispatch(login(result));
         Cookies.set('myCookie', 'hasAccess', { expires: 7 });

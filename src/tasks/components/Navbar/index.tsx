@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { NavbarUl } from "./styled";
+import { MainContainer, NavbarUl } from "./styled";
 import { startLogout } from "../../../store/auth";
 
 const Component = () => {
@@ -9,16 +9,10 @@ const Component = () => {
     console.log(user);
 
     const logout = () => {
-        console.log('hola');
         dispatch(startLogout());
       }
   return (
-    <div className="navbar mb-4 px-4 navbar-custom ">
-    <span className="navbar-brand">
-      <i className="fas fa-align-left"></i>
-      &nbsp;
-      { user }
-    </span>
+    <MainContainer className="navbar mb-4 px-4 navbar-custom ">
     <div className="">
       <NavbarUl className="navbar-nav">
         <li className="nav-item">
@@ -50,7 +44,7 @@ const Component = () => {
         </button>
       </NavbarUl>
     </div>
-  </div>
+  </MainContainer>
   );
 };
 

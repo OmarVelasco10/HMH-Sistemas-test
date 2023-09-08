@@ -16,22 +16,23 @@ export const AuthSlice = createSlice({
     name: 'authSlice',
     initialState,
     reducers: {
-        login: (state, { payload } ) => {
-            state.user = payload.user;
+        login: ( state ) => {
             state.loginSuccess = true;
-            state.errorMessage = null;
         },
-        logout: (state, { payload }) => {
+        logout: ( state ) => {
             state.user = null;
             state.loginSuccess = false;
             state.errorMessage = null;
         },
-        checkingCookie: (state) => {
+        checkingCookie: ( state ) => {
             state.loginSuccess = true;
+        },
+        showMessage: ( state, {payload} ) => {
+            state.errorMessage = payload.errorMessage;
         }
     }
 });
 
 
 
-export const { login, logout, checkingCookie } = AuthSlice.actions;
+export const { login, logout, checkingCookie, showMessage } = AuthSlice.actions;
