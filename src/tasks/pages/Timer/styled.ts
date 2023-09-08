@@ -1,25 +1,24 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
 `;
 
 export const CardContainer = styled.div`
+  border-color: ${(props) => props.theme.colors.purpleSecondary};
   gap: 10px;
-  border-color: #8758ff;;
 `;
 
 export const Input = styled.input`
-    border-color: #8758ff;
+  border-color: ${(props) => props.theme.colors.purpleSecondary};
 `;
 
 export const Button = styled.button`
-  background-color: #8758ff;
-  color: #fff;
-  
+  background-color: ${(props) => props.theme.colors.purpleSecondary};
+  color: ${(props) => props.theme.colors.whitePrimary};
 `;

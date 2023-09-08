@@ -1,27 +1,22 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
 `;
 
 export const InputGitProfile = styled.input`
-max-width: 50vw;
-  border: 1px solid #8758ff;
+  border: 1px solid ${(props) => props.theme.colors.purpleSecondary};
+  max-width: 50vw;
 `;
 
-export const Title = styled.h1`
-    
-`;
+export const Title = styled.h1``;
 
 export const Button = styled.button`
-    /* background: #8758ff; */
-    background: #8758ff;
-   
-    color: #FFF;
+  background-color: ${(props) => props.theme.colors.purpleSecondary};
+  color: ${(props) => props.theme.colors.whitePrimary};
 `;
-

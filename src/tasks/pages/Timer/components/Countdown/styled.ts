@@ -5,6 +5,6 @@ export const MainContainer = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 `;

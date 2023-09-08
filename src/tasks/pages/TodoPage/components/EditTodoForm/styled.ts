@@ -5,20 +5,20 @@ export const FormTodo = styled.form`
 `;
 
 export const Input = styled.input`
-  outline: none;
   background: none;
   border: 1px solid #8758ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
+  color: ${(props) => props.theme.colors.whitePrimary};
   margin-bottom: 2rem;
+  margin-top: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
   width: 300px;
-  color: #fff;
 `;
 
 export const Button = styled.button`
- background: #8758ff;
-  color: #fff;
+  background-color: ${(props) => props.theme.colors.purpleSecondary};
   border: none;
-  padding: 0.55rem;
+  color: ${(props) => props.theme.colors.whitePrimary};
   cursor: pointer;
+  padding: 0.55rem;
 `;

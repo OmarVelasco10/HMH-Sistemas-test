@@ -2,24 +2,21 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   min-height: 100vh;
- 
 `;
 
 export const FormContainer = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
-  
 
   form {
-    background-color: #FFF;
+    background-color: #fff;
+    border: 1px solid ${(props) => props.theme.colors.purpleSecondary};
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.2);
     width: 50%;
-    border: 1px solid #8758ff;
   }
-
 `;
 
 export const LoginRow = styled.div`
@@ -29,14 +26,14 @@ export const LoginRow = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #8758ff;
+  color: ${(props) => props.theme.colors.purpleSecondary};
 `;
 
 export const Button = styled.button`
-  background-color: #8758ff;
-  color: #FFF;
+  background-color: ${(props) => props.theme.colors.purpleSecondary};
+  color: ${(props) => props.theme.colors.whitePrimary};
 `;
 
 export const Input = styled.input`
-  border-color:  #8758ff;
+  border-color: ${(props) => props.theme.colors.purpleSecondary};
 `;

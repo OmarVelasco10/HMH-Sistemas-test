@@ -5,16 +5,16 @@ interface TitleProps {
 }
 
 export const MainContainer = styled.div`
-width: 419px;
-   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #8758ff;
-  color: #fff;
-  padding: 0.75rem 1rem;
+  background: ${(props) => props.theme.colors.purpleSecondary};
   border-radius: 5px;
-  margin-bottom: 1rem;
+  color: ${(props) => props.theme.colors.whitePrimary};
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  width: 419px;
 
   p {
     margin-block-end: 0;
@@ -27,10 +27,6 @@ export const IconContainer = styled.div`
 `;
 
 export const Title = styled.p<TitleProps>`
-  color: ${(props) => props.done &&  '#c5aeff' };
-  text-decoration: ${(props) => props.done && 'line-through' };
+  color: ${(props) => props.done && "#c5aeff"};
+  text-decoration: ${(props) => props.done && "line-through"};
 `;
-
-
-
-

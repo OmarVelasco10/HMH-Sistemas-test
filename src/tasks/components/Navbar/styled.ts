@@ -6,20 +6,18 @@ export const MainContainer = styled.div`
 `;
 
 export const InputGitProfile = styled.input`
-max-width: 50vw;
-  border: 1px solid #8758ff;
+  border: 1px solid ${(props) => props.theme.colors.purpleSecondary};
+  max-width: 50vw;
 `;
 
 export const NavbarUl = styled.ul`
-    display: flex;
-    flex-direction: row;
-    gap: 30px
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 `;
 
 export const Button = styled.button`
-    /* background: #8758ff; */
-    background: #8758ff;
-   
-    color: #FFF;
-`;
+  background-color: ${(props) => props.theme.colors.purpleSecondary};
 
+  color: ${(props) => props.theme.colors.whitePrimary};
+`;
