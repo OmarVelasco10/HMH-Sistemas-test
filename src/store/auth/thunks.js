@@ -7,7 +7,6 @@ import Cookies from 'js-cookie';
 export const startLogin = (user, password) => {
     return async(dispatch) => {
         const result = await loginWithUserPassword(user, password);
-        console.log(result);
 
         if( !result.ok ) return dispatch(logout(result));
 
@@ -18,12 +17,9 @@ export const startLogin = (user, password) => {
 
 export const checkingAuthentication = () => {
     const valueCookie = Cookies.get('myCookie');
-    console.log(valueCookie);
   
     if (valueCookie === 'hasAccess') {
-      console.log('hola1');
       return async (dispatch) => {
-        console.log('hola');
         dispatch(checkingCookie());
       };
     } else {

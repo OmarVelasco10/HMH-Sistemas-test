@@ -1,6 +1,6 @@
 export { Panel } from './Panel';
 export { TodoPage } from './TodoPage';
-export { TimerPage } from './TimerPage';
+export { Timer } from './Timer';
 export { GitProfile } from './GitProfile';
 
 
