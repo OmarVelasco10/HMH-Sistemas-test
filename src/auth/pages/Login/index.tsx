@@ -1,6 +1,5 @@
-import { useDispatch } from "react-redux";
 
-import { MainContainer, FormContainer } from "./styled";
+import { MainContainer, FormContainer, Title, Button, Input } from "./styled";
 import { useForm } from "../../../hooks/useForm";
 import { startLogin } from "../../../store/auth";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
@@ -35,26 +34,26 @@ const Component = () => {
     dispatch(startLogin(user,password));
     
   };
-  
+
   return (
     <MainContainer className="container">
       <FormContainer>
         <form className="rounded p-4 p-sm-3 form" onSubmit={onLoginSubmit}>
-          <h1 className="text-center text-primary">Login</h1>
+          <Title className="text-center">Login</Title>
           <div className="mb-3">
-            <label htmlFor="user">Email Address</label>
-            <input
+            <label htmlFor="user">Username</label>
+            <Input
               type="text"
               className="form-control"
-              placeholder="name"
+              placeholder="username"
               name="user"
               value={user}
               onChange={onInputChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="password">Name</label>
-            <input
+            <label htmlFor="password">Password</label>
+            <Input
               type="password"
               className="form-control"
               placeholder="password"
@@ -63,7 +62,7 @@ const Component = () => {
               onChange={onInputChange}
             />
           </div>
-          <button  className="btn btn-primary" onClick={onLoginSubmit}>Login</button>
+          <Button  className="btn" onClick={onLoginSubmit}>Login</Button>
         </form>
       </FormContainer>
     </MainContainer>

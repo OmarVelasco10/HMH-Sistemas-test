@@ -4,9 +4,20 @@ import { PublicRoute } from "./PublicRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
 import { TasksRoutes } from "../tasks/routes/TasksRoutes";
-import { useAppSelector } from "../hooks";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { useEffect } from "react";
+import { checkingAuthentication } from "../store/auth";
 
 export const AppRouter = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    const thunk = checkingAuthentication();
+
+    if (typeof thunk === 'function') {
+      thunk(dispatch);
+    }
+  }, [dispatch]);
   const { loginSuccess } = useAppSelector( (state ) => state.auth);
 
 

@@ -2,7 +2,6 @@ import GitApi from "../apis/gitApi";
 
 export const getGitHubProfile = async (user) => {
     try {
-        console.log(GitApi);
         const {data} = await GitApi.get(user);
 
         if(data) {

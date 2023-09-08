@@ -16,7 +16,6 @@ export interface TaskProps {
 
 const Component = () => {
   const [todos, setTodos] = useState<TaskProps[]>([]);
-  console.log(todos);
 
   const addTodo = (todo: string) => {
     setTodos([
@@ -51,7 +50,6 @@ const Component = () => {
   }
 
   const editTask = (task: string, id: string) => {
-    console.log(task);
     setTodos(
       todos.map((todo) =>
         todo.id === id ? { ...todo, title: task, isEditing: !todo.isEditing } : todo

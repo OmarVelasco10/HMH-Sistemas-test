@@ -13,7 +13,6 @@ interface TodoProps {
 
 const Component = (props: TodoProps) => {
   const { task, toggleComplete, deleteTodo, editTodo } = props;
-console.log(task.done);
   return (
     <MainContainer>
       <Title onClick={() => toggleComplete(task.id)} done={task.done}>

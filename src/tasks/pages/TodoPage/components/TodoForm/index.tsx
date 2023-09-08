@@ -16,7 +16,6 @@ const Component = ({ addTodo }: FormProps) => {
 
     const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(value);
 
         addTodo(value);
 

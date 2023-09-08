@@ -9,7 +9,6 @@ import { TaskProps } from "../TodoWrapper";
 
 const Component = (props: FormProps) => {
   const { editTodo, task } = props;
-  console.log(task);
     
     const [value, setValue] = useState(task.title);
 
@@ -20,7 +19,6 @@ const Component = (props: FormProps) => {
 
     const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(value);
 
         editTodo(value, task.id);
     }
